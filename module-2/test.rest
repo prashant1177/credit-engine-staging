@@ -1,0 +1,71 @@
+### Get Credit Status
+GET https://credit-engine-new.vercel.app/api/credits/684a721869cdd79c901929d7
+Accept: application/json
+
+### Issue Credit
+POST https://credit-engine-new.vercel.app/api/credits
+Content-Type: application/json
+
+{
+    "userId": "684a721869cdd79c901929d7",
+    "actionType": "spendMultiplier",
+    "amount": 75,
+    "metadata": {
+        "moduleName": "testModule",
+        "progress": "completed"
+    }
+}
+
+### Enroll User
+POST https://credit-engine-new.vercel.app/api/enroll
+Content-Type: application/json
+
+{
+    "name": "testuser4",
+    "email": "test4@example.com",
+    "role":"student",
+    "password": "pacdsfsd23ewe"
+}
+
+
+### Issue Credit (Invalid Action Type)
+POST https://credit-engine-new.vercel.app/api/credits
+Content-Type: application/json
+
+{
+    "userId": "684a721869cdd79c901929d7",
+    "actionType": "invalidAction",
+    "amount": 50
+}
+
+### Issue Credit (Missing Data)
+POST https://credit-engine-new.vercel.app/api/credits
+Content-Type: application/json
+
+{
+    "userId": "684a721869cdd79c901929d7"
+}
+
+### Register User
+POST https://credit-engine-new.vercel.app/api/user/signup
+Content-Type: application/json
+
+{
+    "name": "testuser100",
+    "email": "test100@example.com",
+    "password": "dfsdfgadfer"
+}
+
+### Login User
+POST https://credit-engine-new.vercel.app/api/user/login
+Content-Type: application/json
+
+{
+    "email": "test5@example.com",
+    "password": "dfsdfgadfer"
+}
+
+### Get User profile after login
+GET https://credit-engine-new.vercel.app/api/user/profile
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Njg0OTU0MzQ5MWNjNjdhMWYxOTViZmZl.-CANQoEstzzxbqdLzdLPyyxFQM1cMvDjA30NErhAvRE
