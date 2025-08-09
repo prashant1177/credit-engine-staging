@@ -1,4 +1,4 @@
-import { expect, describe, it } from 'vitest';
+const { expect, describe, it } = await import('vitest');
 
 describe('Temp', () => {
 	it('should pass', () => {
